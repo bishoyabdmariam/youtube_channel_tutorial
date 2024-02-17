@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
-import 'package:youtube_channel_content/endpoints.dart';
+import 'package:youtube_channel_content/flutter_3_19/endpoints.dart';
 
 class GeminiResponse extends StatefulWidget {
   const GeminiResponse({super.key});
