@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:youtube_channel_content/endpoints.dart';
@@ -37,10 +36,19 @@ class _GeminiResponseState extends State<GeminiResponse> {
                 child: CircularProgressIndicator(),
               );
             } else if (snapshot.hasData) {
-              return Center(child: Text(snapshot.data!));
+              return Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SingleChildScrollView(
+                  child: Center(
+                    child: Text(
+                      snapshot.data!,
+                    ),
+                  ),
+                ),
+              );
             } else {
               return const Center(
-                child: Text("There is no data"),
+                child: Text("There is an error"),
               );
             }
           }),

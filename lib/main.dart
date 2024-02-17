@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'flutter_3_19/generate_text_gemini.dart';
 import 'flutter_3_19/multi_scroll.dart';
 
 void main() {
@@ -16,8 +15,6 @@ class MyApp extends StatelessWidget {
     return const MultiScroll();
   }
 }
-
-
 
 class MyCustomScrollBehavior extends MaterialScrollBehavior {
   // Override behavior methods and getters like multitouchDragStrategy
@@ -38,7 +35,7 @@ class _MultiScrollState extends State<MultiScroll> {
   Widget build(BuildContext context) {
     return MaterialApp(
       scrollBehavior: MyCustomScrollBehavior(),
-      home: const GeminiResponse(),
+      home: const MultiScrollWidget(),
     );
   }
 }

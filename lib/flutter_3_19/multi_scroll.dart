@@ -1,8 +1,4 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
-import 'generate_text_gemini.dart';
-
 
 class MultiScrollWidget extends StatelessWidget {
   const MultiScrollWidget({
@@ -18,15 +14,17 @@ class MultiScrollWidget extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-          itemCount: 2000,
+          itemCount: 2030,
           itemBuilder: (context, index) {
             return Container(
-              color: Colors.red,
+              color: Colors.greenAccent,
               child: ListTile(
-                title: Text(
-                  index.toString(),
-                  style: const TextStyle(
-                    color: Colors.black,
+                title: Center(
+                  child: Text(
+                    index.toString(),
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
