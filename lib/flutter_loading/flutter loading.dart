@@ -14,6 +14,7 @@ class _FlutterLoadingState extends State<FlutterLoading> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        backgroundColor: Colors.green,
         title: const Text(
           " Flutter Loading ",
         ),
@@ -25,44 +26,120 @@ class _FlutterLoadingState extends State<FlutterLoading> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              _buildLoadingSpinner('CircularProgressIndicator',
-                  const CircularProgressIndicator(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitPouringHourGlassRefined',
-                  const SpinKitPouringHourGlassRefined(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitPouringHourGlass',
-                  const SpinKitPouringHourGlass(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitDancingSquare',
-                  const SpinKitDancingSquare(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitChasingDots',
-                  const SpinKitChasingDots(color: Colors.black)),
               _buildLoadingSpinner(
-                  'SpinKitRing', const SpinKitRing(color: Colors.black)),
+                'CircularProgressIndicator',
+                const CircularProgressIndicator(
+                  color: Colors.black,
+                ),
+              ),
               _buildLoadingSpinner(
-                  'SpinKitCircle', const SpinKitCircle(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitCubeGrid',
-                  const SpinKitCubeGrid(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitDoubleBounce',
-                  const SpinKitDoubleBounce(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitDualRing',
-                  const SpinKitDualRing(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitFadingCircle',
-                  const SpinKitFadingCircle(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitFadingCube',
-                  const SpinKitFadingCube(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitFadingFour',
-                  const SpinKitFadingFour(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitHourGlass',
-                  const SpinKitHourGlass(color: Colors.black)),
+                'SpinKitPouringHourGlassRefined',
+                const SpinKitPouringHourGlassRefined(
+                  color: Colors.black,
+                ),
+              ),
               _buildLoadingSpinner(
-                  'SpinKitPulse', const SpinKitPulse(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitPianoWave',
-                  const SpinKitPianoWave(color: Colors.black)),
+                'SpinKitPouringHourGlass',
+                const SpinKitPouringHourGlass(
+                  color: Colors.black,
+                ),
+              ),
               _buildLoadingSpinner(
-                  'SpinKitRipple', const SpinKitRipple(color: Colors.black)),
-              _buildLoadingSpinner('SpinKitSpinningLines',
-                  const SpinKitSpinningLines(color: Colors.black)),
+                'SpinKitDancingSquare',
+                const SpinKitDancingSquare(
+                  color: Colors.black,
+                ),
+              ),
               _buildLoadingSpinner(
-                  'SpinKitWave', const SpinKitWave(color: Colors.black)),
+                'SpinKitChasingDots',
+                const SpinKitChasingDots(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitRing',
+                const SpinKitRing(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitCircle',
+                const SpinKitCircle(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitCubeGrid',
+                const SpinKitCubeGrid(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitDoubleBounce',
+                const SpinKitDoubleBounce(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitDualRing',
+                const SpinKitDualRing(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitFadingCircle',
+                const SpinKitFadingCircle(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitFadingCube',
+                const SpinKitFadingCube(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitFadingFour',
+                const SpinKitFadingFour(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitHourGlass',
+                const SpinKitHourGlass(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitPulse',
+                const SpinKitPulse(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitPianoWave',
+                const SpinKitPianoWave(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitRipple',
+                const SpinKitRipple(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitSpinningLines',
+                const SpinKitSpinningLines(
+                  color: Colors.black,
+                ),
+              ),
+              _buildLoadingSpinner(
+                'SpinKitWave',
+                const SpinKitWave(
+                  color: Colors.black,
+                ),
+              ),
             ],
           ),
         ),

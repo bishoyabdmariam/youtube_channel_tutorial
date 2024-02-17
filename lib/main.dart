@@ -1,6 +1,4 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'flutter_3_19/multi_scroll.dart';
 import 'flutter_loading/flutter loading.dart';
 
 void main() {
@@ -17,13 +15,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyCustomScrollBehavior extends MaterialScrollBehavior {
-  // Override behavior methods and getters like multitouchDragStrategy
-  @override
-  MultitouchDragStrategy get multitouchDragStrategy =>
-      MultitouchDragStrategy.sumAllPointers;
-}
-
 class MultiScroll extends StatefulWidget {
   const MultiScroll({super.key});
 
@@ -34,9 +25,9 @@ class MultiScroll extends StatefulWidget {
 class _MultiScrollState extends State<MultiScroll> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      scrollBehavior: MyCustomScrollBehavior(),
-      home: const FlutterLoading(),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: FlutterLoading(),
     );
   }
 }
