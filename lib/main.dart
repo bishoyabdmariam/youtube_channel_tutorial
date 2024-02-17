@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'flutter_3_19/multi_scroll.dart';
+import 'flutter_loading/flutter loading.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +36,7 @@ class _MultiScrollState extends State<MultiScroll> {
   Widget build(BuildContext context) {
     return MaterialApp(
       scrollBehavior: MyCustomScrollBehavior(),
-      home: const MultiScrollWidget(),
+      home: const FlutterLoading(),
     );
   }
 }
