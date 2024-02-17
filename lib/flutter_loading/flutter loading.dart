@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class FlutterLoading extends StatefulWidget {
-  const FlutterLoading({super.key});
+  const FlutterLoading({Key? key}) : super(key: key);
 
   @override
   State<FlutterLoading> createState() => _FlutterLoadingState();
@@ -18,91 +18,67 @@ class _FlutterLoadingState extends State<FlutterLoading> {
           " Flutter Loading ",
         ),
       ),
-      body: const Padding(
-        padding: EdgeInsets.symmetric(vertical: 18.0,),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 18.0),
         child: SingleChildScrollView(
-          child:  Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CircularProgressIndicator(color: Colors.black),
-              SizedBox(width: 30, height: 30),
-              SpinKitPouringHourGlassRefined(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitPouringHourGlass(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitDancingSquare(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitChasingDots(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitRing(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitCircle(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitCubeGrid(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitDoubleBounce(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitDualRing(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitFadingCircle(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitFadingCube(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitFadingFour(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitHourGlass(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitPulse(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitPianoWave(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitRipple(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitSpinningLines(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
-              SpinKitWave(
-                color: Colors.black,
-              ),
-              SizedBox(width: 30, height: 30),
+              _buildLoadingSpinner('CircularProgressIndicator',
+                  const CircularProgressIndicator(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitPouringHourGlassRefined',
+                  const SpinKitPouringHourGlassRefined(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitPouringHourGlass',
+                  const SpinKitPouringHourGlass(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitDancingSquare',
+                  const SpinKitDancingSquare(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitChasingDots',
+                  const SpinKitChasingDots(color: Colors.black)),
+              _buildLoadingSpinner(
+                  'SpinKitRing', const SpinKitRing(color: Colors.black)),
+              _buildLoadingSpinner(
+                  'SpinKitCircle', const SpinKitCircle(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitCubeGrid',
+                  const SpinKitCubeGrid(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitDoubleBounce',
+                  const SpinKitDoubleBounce(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitDualRing',
+                  const SpinKitDualRing(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitFadingCircle',
+                  const SpinKitFadingCircle(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitFadingCube',
+                  const SpinKitFadingCube(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitFadingFour',
+                  const SpinKitFadingFour(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitHourGlass',
+                  const SpinKitHourGlass(color: Colors.black)),
+              _buildLoadingSpinner(
+                  'SpinKitPulse', const SpinKitPulse(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitPianoWave',
+                  const SpinKitPianoWave(color: Colors.black)),
+              _buildLoadingSpinner(
+                  'SpinKitRipple', const SpinKitRipple(color: Colors.black)),
+              _buildLoadingSpinner('SpinKitSpinningLines',
+                  const SpinKitSpinningLines(color: Colors.black)),
+              _buildLoadingSpinner(
+                  'SpinKitWave', const SpinKitWave(color: Colors.black)),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildLoadingSpinner(String name, Widget spinner) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(name),
+        const SizedBox(width: 50),
+        spinner,
+        const SizedBox(height: 100),
+      ],
     );
   }
 }
