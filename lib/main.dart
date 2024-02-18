@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'flutter_internet_connection_checker/flutter_internet_connection_checker.dart';
 import 'flutter_loading/flutter loading.dart';
 
 void main() {
@@ -25,9 +27,9 @@ class MultiScroll extends StatefulWidget {
 class _MultiScrollState extends State<MultiScroll> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FlutterLoading(),
+      home: InternetConnectionCheck(),
     );
   }
 }

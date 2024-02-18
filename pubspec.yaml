@@ -38,6 +38,8 @@ dependencies:
   google_generative_ai: ^0.2.0
   get_it: ^7.6.7
   flutter_spinkit: ^5.2.0
+  internet_connection_checker: ^1.0.0+1
+  get: ^4.6.6
 
 
 
